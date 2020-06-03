@@ -10,7 +10,11 @@ let addWindow;
 //listen for the app to be ready
 app.on("ready", () => {
   //create new window
-  mainWindow = new BrowserWindow({});
+  mainWindow = new BrowserWindow({
+    webPreferences: {
+      nodeIntegration: true,
+    },
+  });
   //load the html into window
   // file://dirname/mainWindow.html
   mainWindow.loadURL(
@@ -38,6 +42,9 @@ createAddWindow = () => {
     width: 300,
     height: 200,
     title: "Add Shopping List Item",
+    webPreferences: {
+      nodeIntegration: true,
+    },
   });
   //load the html into window
   // file://dirname/mainWindow.html
@@ -53,6 +60,8 @@ createAddWindow = () => {
   addWindow.on("close", () => {
     addWindow = null;
   });
+
+  //   addWindow.setMenu(null);
 };
 
 //create menu template
