@@ -21,6 +21,11 @@ app.on("ready", () => {
     })
   );
 
+  //quit app when closed
+  mainWindow.on("closed", () => {
+    app.quit();
+  });
+
   //Build menu from template
   const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
   // insert menu
