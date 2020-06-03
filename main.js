@@ -39,6 +39,7 @@ const mainMenuTemplate = [
       },
       {
         label: "Quit",
+        accelerator: process.platform == "darwin" ? "Command+Q" : "Ctrl +Q",
         click() {
           app.quit();
         },
