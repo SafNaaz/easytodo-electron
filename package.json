@@ -1,0 +1,15 @@
+{
+  "name": "shopping-list",
+  "version": "1.0.0",
+  "description": "shopping list desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "safnas",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^9.0.2"
+  }
+}
