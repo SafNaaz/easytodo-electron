@@ -48,6 +48,11 @@ createAddWindow = () => {
       slashes: true,
     })
   );
+
+  //garbage collection handle
+  addWindow.on("close", () => {
+    addWindow = null;
+  });
 };
 
 //create menu template
