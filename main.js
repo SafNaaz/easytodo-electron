@@ -4,6 +4,8 @@ const path = require("path");
 
 const { app, BrowserWindow, Menu, ipcMain } = electron;
 
+process.env.NODE_ENV = "production";
+
 let mainWindow;
 let addWindow;
 
@@ -11,6 +13,8 @@ let addWindow;
 app.on("ready", () => {
   //create new window
   mainWindow = new BrowserWindow({
+    width: 400,
+    height: 600,
     webPreferences: {
       nodeIntegration: true,
     },
@@ -41,7 +45,7 @@ createAddWindow = () => {
   addWindow = new BrowserWindow({
     width: 300,
     height: 200,
-    title: "Add Shopping List Item",
+    title: "Add ToDo Item",
     webPreferences: {
       nodeIntegration: true,
     },
@@ -61,7 +65,7 @@ createAddWindow = () => {
     addWindow = null;
   });
 
-  //   addWindow.setMenu(null);
+  addWindow.setMenu(null);
 };
 
 // catch item:Add
