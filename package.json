@@ -13,7 +13,7 @@
   "author": "safnas",
   "license": "ISC",
   "dependencies": {
-    "electron": "^9.0.2"
+    "electron": "^15.5.5"
   },
   "devDependencies": {
     "electron-packager": "^14.2.1"
